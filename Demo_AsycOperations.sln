@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo_AsycOperations", "Demo_AsycOperations\Demo_AsycOperations.csproj", "{FD4C1CDD-DDA8-4930-AFD5-DFE11D0B968D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo_AsyncOperations", "Demo_AsycOperations\Demo_AsyncOperations.csproj", "{FD4C1CDD-DDA8-4930-AFD5-DFE11D0B968D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo_SimpleThreads", "Demo_SimpleThreads\Demo_SimpleThreads.csproj", "{64ED350C-4BDD-4ADD-9FBD-48D208B0F624}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FD4C1CDD-DDA8-4930-AFD5-DFE11D0B968D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD4C1CDD-DDA8-4930-AFD5-DFE11D0B968D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD4C1CDD-DDA8-4930-AFD5-DFE11D0B968D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64ED350C-4BDD-4ADD-9FBD-48D208B0F624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64ED350C-4BDD-4ADD-9FBD-48D208B0F624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64ED350C-4BDD-4ADD-9FBD-48D208B0F624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64ED350C-4BDD-4ADD-9FBD-48D208B0F624}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

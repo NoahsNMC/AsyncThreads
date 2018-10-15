@@ -11,18 +11,26 @@ namespace Demo_AsycOperations
     {
         static void Main(string[] args)
         {
+            double factorial1, factorial2;
+
             Console.WriteLine("Demonstration of Asynchronous Operations");
 
             Console.WriteLine();
 
-            Console.WriteLine("Press any key to list factorials up to 20.");
+            Console.WriteLine("Press any key to calculate 20! and 30!.");
             Console.ReadKey();
+            Console.WriteLine("Calculating");
 
-            for (int i = 1; i <= 20; i++)
-            {
-                Console.WriteLine(Factorial(i));
-            }
 
+            Task<double> factorialTask1 = GetFactorialAsync(20);
+            factorial1 = factorialTask1.Result;
+            Task<double> factorialTask2 = GetFactorialAsync(30);
+            factorial2 = factorialTask2.Result;
+
+            Console.WriteLine($"20! = {factorial1}");
+            Console.WriteLine($"30! = {factorial2}");
+
+            Console.WriteLine("Press any key to continue.");
             Console.ReadKey();
         }
 
@@ -33,9 +41,16 @@ namespace Demo_AsycOperations
                 operand = operand * Factorial(operand - 1);
             }
 
-            Thread.Sleep(75);
+            Thread.Sleep(100);
 
             return (operand);
+        }
+
+        static async Task<double> GetFactorialAsync(int i)
+        {
+            double factorial = await Task.Run(() => Factorial(i));
+
+            return factorial;
         }
     }
 }
