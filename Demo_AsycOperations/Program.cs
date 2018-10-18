@@ -18,19 +18,20 @@ namespace Demo_AsycOperations
             Console.WriteLine();
 
             Console.WriteLine("Press any key to calculate 20!, 30!, and 50!.");
+            Console.WriteLine("Count the cursor flashes to get an approximate duration for the operation.");
             Console.ReadKey();
             Console.WriteLine("Calculating");
 
-            //factorial1 = Factorial(20);
-            //factorial2 = Factorial(30);
-            //factorial3 = Factorial(50);
+            factorial1 = Factorial(20);
+            factorial2 = Factorial(30);
+            factorial3 = Factorial(50);
 
-            Task<double> factorialTask1 = GetFactorialAsync(20);
-            Task<double> factorialTask2 = GetFactorialAsync(30);
-            Task<double> factorialTask3 = GetFactorialAsync(50);
-            factorial1 = factorialTask1.Result;
-            factorial2 = factorialTask2.Result;
-            factorial3 = factorialTask3.Result;
+            //Task<double> factorialTask1 = GetFactorialAsync(20);
+            //Task<double> factorialTask2 = GetFactorialAsync(30);
+            //Task<double> factorialTask3 = GetFactorialAsync(50);
+            //factorial1 = factorialTask1.Result;
+            //factorial2 = factorialTask2.Result;
+            //factorial3 = factorialTask3.Result;
 
             Console.WriteLine($"20! = {factorial1}");
             Console.WriteLine($"30! = {factorial2}");
