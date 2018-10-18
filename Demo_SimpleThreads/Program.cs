@@ -14,7 +14,7 @@ namespace Demo_SimpleThreads
             DisplayHeader("Threading Demonstration");
             DisplayContinuePrompt();
 
-            //SimpleSleepCurrentThread(2);
+            SimpleSleepCurrentThread(4);
             CountingWithNewThread();
 
             DisplayContinuePrompt();
@@ -46,12 +46,12 @@ namespace Demo_SimpleThreads
             //
             Thread thread1 = new Thread(PrintCountingNumbers);
             thread1.Start();
-            //thread1.Join();
-            //Thread thread2 = new Thread(PrintCountingNumbers);
-            //thread2.Start();
+            thread1.Join();
+            Thread thread2 = new Thread(PrintCountingNumbers);
+            thread2.Start();
 
 
-            //thread2.Join();
+            thread2.Join();
 
             DisplayContinuePrompt();
         }
